@@ -7,21 +7,18 @@ import pages.LoginPage;
 public class LoginTest {
 
   @Test
-  public void loginTest() {
+  public void testLogin(){
+    // driver.findElement(By.id('email').sendKeys("feaf@feiao.com");
     LoginPage loginPage = new LoginPage();
-    loginPage.enterEmail("ASHJhajsh");
-    loginPage.enterPassword("password");
-    loginPage.login();
+    loginPage.enterEmail("feaf@feiao.com");
+    loginPage.enterPassword("pass");
+    loginPage.clickLogin();
 
-    //2nd approach
-    loginPage.doLogin("ASHJhajsh", "password");
+    //2nd Approach
+    loginPage.doLogin("feawfawe","pass");
 
-    //3rd approach mathod chaining
-    loginPage.enterEmail("ASHJhajsh")
-            .enterPassword("password").login();
-
-    HomePage homePage = loginPage.doLogin("ASHJhajsh", "password");
-    homePage.search("Mobile").applyBrancBuilder("Apple");
-
+    //3rd Method Chaining
+    HomePage homePage = loginPage.enterEmail("fewafawe").enterPassword("password").clickLogin();
+    homePage.search("bluetooth tws").applyBrandFiler("Samsung");
   }
 }

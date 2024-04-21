@@ -1,34 +1,37 @@
 package pages;
 
 public class LoginPage {
-  // WebElement
+  //Webelements
+  //Webelement login= driver.findElement();
+
+  //@FindBy(id="fewaf")
+  //WebElement logn
 
 
-  // Methods
+  //methods
   public LoginPage enterEmail(String email) {
-    // Enter email
-    System.out.println("Entering email: " + email);
+    System.out.println(email + " entered");
+    //login element
     return this;
   }
 
+  //methods
   public LoginPage enterPassword(String password) {
-    // Enter email
-    System.out.println("Entering password: " + password);
+    System.out.println(password + " entered");
+    //to do implementation
     return this;
   }
 
-
-  public LoginPage login() {
-    // Enter email
-    System.out.println("click on login page");
-    return this;
+  public HomePage clickLogin() {
+    System.out.println("Login clicked");
+    return new HomePage();
   }
 
-    public HomePage doLogin(String email, String password) {
-        enterEmail(email);
-        enterPassword(password);
-        login();
-        return new HomePage();
-    }
+  public void doLogin(String email, String password){
+    enterEmail("feawf");
+    enterPassword("feawf");
+    clickLogin();
+
+  }
 
 }
